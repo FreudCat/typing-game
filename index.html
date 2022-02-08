@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Typing Game</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Scribe Program</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- The links in the navbar will be associated with a specific database of words. The links will be tied to different modules. Some links will have a dropdown if the module is very large (see the anatomy modules). The links won't become available until the student has opened the module in Canvas and has met the required passing score for the typing challenge associated with the previous module -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Anatomy and Terminology I
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Musculoskeletal</a></li>
+                <li><a class="dropdown-item" href="#">Genitourinary</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Anatomy and Terminology II
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Cardiopulmonary</a></li>
+                <li><a class="dropdown-item" href="#">Gastrointestinal</a></li>
+              </ul>
+            </li>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class = "container text-center">
+      <div class = "row main-row">
+        <div class = "col-8 input-col">
+          <div class = "row word-row justify-content-center">
+            <div class = "col-12">
+              <p>Type the given word</p>
+              <p id = "current-word">Hello</p>
+            </div>
+          </div>
+    
+          <div class = "row input-row justify-content-center">
+            <div class = "col-8">
+              <input type = "text" class = "form-control form-control-lg" placeholder = "Start typing..." id = "typed-input" autofocus>
+            </div>
+          </div>
+    
+          <div class = "row score-row justify-content-center">
+            <div class = "col-12">
+              <p>Remaning words: <span id = "remaining-words"></span> </p>
+              <p>Score: <span id = "score"></span></p>
+            </div>
+          </div>
+    
+        </div>
+        <div class = "col-4 info-col">
+          <button type="button" class="btn btn-warning">Text</button>
+          <button type="button" class="btn btn-warning">Audio</button>
+          <button type="button" class="btn btn-warning">Interpret</button>
+        </div>
+      </div>
+
+      
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
