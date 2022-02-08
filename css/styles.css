@@ -3,3 +3,7 @@
 #current-word {
   font-size: 4em;
 }
+
+.invisible {
+  display: none;
+}
