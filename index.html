@@ -52,14 +52,15 @@
       <div class = "row main-row">
         <div class = "col-8 input-col">
           <div class = "row word-row justify-content-center">
-            <div class = "col-12">
+            <div class = "col-12 mt-5 pt-5">
               <button type="button" id = "start-button" class="btn btn-warning">Start Game</button>
               <p>Type the word that you see or hear</p>
                     
               <audio controls id = "play-audio" class = "invisible">
                 <source src="" type="audio/mp3">
               </audio>
-
+              <p id = "common-word" class = "invisible"></p><br/>
+              <button type="button" id="show-word" class="btn btn-warning invisible">Show Word</button> <!-- This is sort of a "hint" button. When the student clicks this button, it will show the word that is being spoken in the audio playstyle or the medical term in the interpretation playstyle. It's only available in the audio and interpretation playstles -->
               <p id = "current-word"></p>
               <p id = "message"></p>
             </div>
@@ -73,12 +74,13 @@
     
           <div class = "row score-row justify-content-center">
             <div class = "col-12">
-              <p>Remaning words: <span id = "remaining-words"></span> </p>
               <p class = "display-time invisible">Time left: <span id = "time-left">60</span> seconds</p>
-              <p class = "display-score invisible">Score: <span id = "score"></span></p>
               <p class = "display-time invisible instructions">You have 60 seconds to get as many words correct as possible. When you are ready, click "Start Game" at the top of the screen.</p>
+              <p class = "display-score invisible">Words Left: <span id = "words-left">25</span></p>
+              <p class = "display-score invisible">Score: <span id = "score"></span></p>
               <p class = "display-practice invisible instructions">You have access to all of the currently available words and unlimited time. When you are ready to start practicing, click "Start Game" at the top of the screen. Have fun!</p>
               <p class = "display-audio invisible instructions">In this play-style, you will only hear the words and you are asked to type what you hear. When you are read, click "Start Game" at the top of the screen. You got this!</p>
+              <p class = "display-interpret invisible instructions">In this play-style, you will need to type in the correct medical term associated with the word on the screen. When you are ready, click on the "start button" at the top of the screen. You got this!</p>
             </div>
             
           </div>
