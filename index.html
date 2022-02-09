@@ -54,15 +54,20 @@
           <div class = "row word-row justify-content-center">
             <div class = "col-12">
               <button type="button" id = "start-button" class="btn btn-warning">Start Game</button>
-              <p>Type the given word</p>
-              <p id = "current-word">Hello</p>
+              <p>Type the word that you see or hear</p>
+                    
+              <audio controls id = "play-audio" class = "invisible">
+                <source src="" type="audio/mp3">
+              </audio>
+
+              <p id = "current-word"></p>
               <p id = "message"></p>
             </div>
           </div>
     
           <div class = "row input-row justify-content-center">
             <div class = "col-8">
-              <input type = "text" class = "form-control form-control-lg" placeholder = "Start typing..." id = "typed-input" autofocus>
+              <input type = "text" class = "form-control form-control-lg" placeholder = "Start typing..." id = "typed-input" disabled autofocus>
             </div>
           </div>
     
@@ -70,17 +75,27 @@
             <div class = "col-12">
               <p>Remaning words: <span id = "remaining-words"></span> </p>
               <p class = "display-time invisible">Time left: <span id = "time-left">60</span> seconds</p>
-              <p>Score: <span id = "score"></span></p>
+              <p class = "display-score invisible">Score: <span id = "score"></span></p>
+              <p class = "display-time invisible instructions">You have 60 seconds to get as many words correct as possible. When you are ready, click "Start Game" at the top of the screen.</p>
+              <p class = "display-practice invisible instructions">You have access to all of the currently available words and unlimited time. When you are ready to start practicing, click "Start Game" at the top of the screen. Have fun!</p>
+              <p class = "display-audio invisible instructions">In this play-style, you will only hear the words and you are asked to type what you hear. When you are read, click "Start Game" at the top of the screen. You got this!</p>
             </div>
+            
           </div>
     
         </div>
         <div class = "col-4 info-col">
-          <button type="button" class="btn btn-warning">Text</button>
-          <button type="button" class="btn btn-warning">Audio</button>
-          <button type="button" class="btn btn-success">(If audio is on: Show/Hide Word)</button>
-          <button type="button" class="btn btn-warning">Interpret</button>
-          <button type="button" id = "toggle-time" class="btn btn-success">Timed</button>
+          <h2>Choose your play style below</h2>
+          <!-- The student can only choose one version  -->
+          <button type="button" id = "toggle-text" class="btn option-button btn-warning">Text</button>
+          <button type="button" id = "toggle-audio" class="btn option-button btn-warning">Audio</button>
+          <button type="button" id = "toggle-practice" class="btn option-button btn-warning">Practice</button>
+          <!-- Practice allows unlimited words, but can be timed if students want, it will not be scored -->
+          <button type="button" id = "toggle-test" class="btn option-button btn-warning">Test</button>
+          <!-- Test allows for 25 random words and, worth 4 points each, will not be timed. Once the 25 words are cycled through, students will get 4 points for each correct word. Pass is 90% or better  -->
+          <button type="button" id = "toggle-word-with-audio"class="btn btn-success option-button">(If audio is on: Show/Hide Word)</button>
+          <button type="button" id = "toggle-interpret" class="btn btn-warning option-button">Interpret</button>
+          <button type="button" id = "toggle-time" class="btn btn-success option-button">Timed</button>
         </div>
       </div>
 
